@@ -12,13 +12,17 @@ const Header = () => {
                             <path d="M96 0V47L48 94H0V47L48 0H96Z" />
                         </svg>
 
-                        Educational
+                       Learn With Quiz
                     </Link>
                    
                     <nav className="hidden lg:flex gap-12">
                         <Link to='/home' className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Home</Link>
 
                         <Link to='/about' className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">About</Link>
+
+                        <Link to='/topics' className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Topics</Link>
+
+                        <Link to='/blog' className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Blog</Link>
 
                         <Link to='/contact' className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Contact</Link>
 

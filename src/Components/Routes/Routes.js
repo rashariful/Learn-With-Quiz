@@ -5,13 +5,16 @@ import Root from "../Layout/Root";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
 import NotFound from "../NotFound/NotFound";
+import Blog from "../Blog/Blog";
+import Topics from "../Topics/Topics";
+import QuizDetails from "../QuizDetails/QuizDetails";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
         loader: async () => {
-            return fetch('https://restcountries.com/v3.1/all')
+            return fetch(`https://openapi.programming-hero.com/api/quiz/`)
         },
         children: [
             {
@@ -29,6 +32,21 @@ const router = createBrowserRouter([
             {
                 path: 'contact',
                 element: <Contact></Contact>
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
+            },
+            {
+                path: '/topics',
+                element: <Topics></Topics>,
+            },
+            {
+                path:'/qz/:qzid',
+                loader: async ({params}) => {
+                    return fetch(`https://openapi.programming-hero.com/api/quiz/${params.qzid}`)
+                },
+                element: <QuizDetails></QuizDetails>
             },
         ],
 
