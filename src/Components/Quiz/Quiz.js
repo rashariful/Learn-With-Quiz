@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Quiz = ({qz}) => {
 const {name, logo, id , total} = qz
-console.log(qz);
+// console.log(qz);
     return (
         <div className="gap-4 grid border border-indigo-400 py-6 px-4 rounded-md shadow-sm">
             <img src={logo} className='bg-indigo-300 rounded-md' alt="" />
