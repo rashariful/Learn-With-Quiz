@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { MyQuizContext } from '../Layout/Root';
 import Quiz from '../Quiz/Quiz';
+import Topics from '../Topics/Topics';
 
 const Home = () => {
     const myQuiz = useContext(MyQuizContext)
@@ -25,7 +26,7 @@ const Home = () => {
                         </div>
                        
                         <div className="xl:w-5/12 h-48 lg:h-auto bg-gray-100 overflow-hidden shadow-lg rounded-lg">
-                            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200611200432/Top-10-System-Design-Interview-Questions-and-Answers.png" loading="lazy" alt="Photo by Programming hero student designed" className="w-full h-full object-cover object-center" />
+                            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200611200432/Top-10-System-Design-Interview-Questions-and-Answers.png" loading="lazy" alt="Photo by Programming hero student designed" className="h-full min-w-full  object-fill object-center" />
                         </div>
                        
                     </div>
@@ -34,10 +35,12 @@ const Home = () => {
            
             <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 md:gap-x-6 gap-y-8 mb-20 mt-10 max-w-screen-2xl px-4 md:px-8 mx-auto '>
                 {
-                    myQuiz.data.map(qz => <Quiz
-
-                        qz={qz}
-                    ></Quiz>)
+                    myQuiz.data.map(qz => 
+                        <Quiz
+                            qz={qz}
+                        ></Quiz>
+                       
+                    )
                 }
        </div>
            

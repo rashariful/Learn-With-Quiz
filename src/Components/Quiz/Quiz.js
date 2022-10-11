@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Topics from "../Topics/Topics";
 
 const Quiz = ({qz}) => {
 const {name, logo, id , total} = qz
@@ -11,6 +12,12 @@ const {name, logo, id , total} = qz
             <Link to={`/qz/${id}`}>
                 <button className="btn btn-primary w-full">Start Quiz</button>
             </Link>
+            {
+                <Topics
+                qz={qz}
+                ></Topics>
+            }
+            
         </div>
     );
 };

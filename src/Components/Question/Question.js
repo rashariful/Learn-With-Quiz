@@ -3,14 +3,24 @@ import CorrectAnswer from '../CorrectAnswer/CorrectAnswer';
 
 const Question = ({qs}) => {
 
-    const [ans, setAns] = useState([])
+    const [ans, setAns] = useState(false)
 
 
-    const handleclicked = (options)=>{
+    const handleclicked = (qs)=>{
+    
+
+      const anscorrect = qs.correctAnswer;
+
+      console.log(anscorrect);
+
+        if (qs.options.length !== anscorrect){
+            console.log('wron ans');
+        }
+        else{
+                console.log('correctans');
+        }
        
-        console.log(options);
-       
-    }
+    };
 
     const { question } = qs
     return (
@@ -27,7 +37,7 @@ const Question = ({qs}) => {
                 
                 op={op}>{op} 
                 <div className='mt-4 bg-indigo-400'>
-                            <input onChange={() => handleclicked(op)} type="radio" name="quiz" id="" />
+                            <input onChange={() => handleclicked(qs)} type="radio" name="quiz" id="" />
                 </div>
                  </div>)
             }
