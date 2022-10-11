@@ -1,13 +1,10 @@
 import React, { useContext } from 'react';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 import { MyQuizContext } from '../Layout/Root';
-import SingleData from '../SingleData/SingleData';
 
-const About = () => {
-    const datasingle = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 },];
-
+const Recharts = () => {
     const data = useContext(MyQuizContext)
-    console.log(data.data);
+ 
     return (
         <div className='flex justify-center py-52'>
             
@@ -25,4 +22,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default Recharts;

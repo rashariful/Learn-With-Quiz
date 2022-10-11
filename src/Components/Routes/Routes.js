@@ -2,12 +2,12 @@ import { Children } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../Home/Home";
 import Root from "../Layout/Root";
-import About from "../About/About";
 import Contact from "../Contact/Contact";
 import NotFound from "../NotFound/NotFound";
 import Blog from "../Blog/Blog";
 import Topics from "../Topics/Topics";
 import QuizDetails from "../QuizDetails/QuizDetails";
+import Recharts from "../Recharts/Recharts";
 
 const router = createBrowserRouter([
     {
@@ -26,8 +26,8 @@ const router = createBrowserRouter([
                 element: <Home></Home>,
             },
             {
-                path: '/about',
-                element: <About></About>
+                path: '/recharts',
+                element: <Recharts></Recharts>,
             },
             {
                 path: 'contact',
