@@ -1,0 +1,14 @@
+
+
+@media screen and (max-width: 480px) {
+    .recharts_container div{
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .recharts-wrapper{
+       max-width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+}

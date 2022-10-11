@@ -140,7 +140,7 @@ const Footer = () => {
 
                 </div>
 
-                <div className="text-gray-400 text-sm text-center border-t border-gray-800 py-8">© 2022 - Present Educational. All rights reserved.</div>
+                <div className="text-gray-400 text-sm text-center border-t border-gray-800 py-8">© 2022 - Present Learn With Quiz. All rights reserved.</div>
             </footer>
         </div>
     );

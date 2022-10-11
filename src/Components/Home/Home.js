@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { MyQuizContext } from '../Layout/Root';
 import Quiz from '../Quiz/Quiz';
-import Topics from '../Topics/Topics';
 
 const Home = () => {
     const myQuiz = useContext(MyQuizContext)

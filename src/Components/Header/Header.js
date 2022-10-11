@@ -19,12 +19,8 @@ const Header = () => {
                         <Link to='/home' className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Home</Link>
 
                         <Link to='/recharts' className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Rechart</Link>
-
-                        <Link to='/topics' className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Topics</Link>
-
+                        
                         <Link to='/blog' className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Blog</Link>
-
-                        <Link to='/contact' className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Contact</Link>
 
                     </nav>
           
