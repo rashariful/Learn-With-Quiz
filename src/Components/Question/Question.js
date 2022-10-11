@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import CorrectAnswer from '../CorrectAnswer/CorrectAnswer';
 
 const Question = ({qs}) => {
-console.log(qs);
-    const [ans, setAns] = useState([])
-    console.log(ans);
 
-    const handleclicked = (qs)=>{
-        const CorrectAnswer = qs.options.CorrectAnswer;
+    const [ans, setAns] = useState([])
+
+
+    const handleclicked = (options)=>{
        
-        setAns(CorrectAnswer)
-        console.log(CorrectAnswer);
+        console.log(options);
+       
     }
 
     const { question } = qs
@@ -28,7 +27,7 @@ console.log(qs);
                 
                 op={op}>{op} 
                 <div className='mt-4 bg-indigo-400'>
-                            <input onChange={() => handleclicked(qs)} type="radio" name="quiz" id="" />
+                            <input onChange={() => handleclicked(op)} type="radio" name="quiz" id="" />
                 </div>
                  </div>)
             }
