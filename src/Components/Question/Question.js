@@ -5,8 +5,7 @@ import { EyeIcon} from '@heroicons/react/24/solid'
 const Question = ({qs}) => {
     const correctAnswer = qs.correctAnswer
 
-    const handleclicked = (option)=>{
-        
+    const handleChecker = (option)=>{
 
         if (option === correctAnswer){
            
@@ -30,7 +29,7 @@ const Question = ({qs}) => {
        
     };
 
-    const eye = (qs) => {
+    const showCorrectAnswer = (qs) => {
         const correctAnswer = qs.correctAnswer
         swal({
           
@@ -39,7 +38,7 @@ const Question = ({qs}) => {
             text: correctAnswer,
 
         })
-        console.log(correctAnswer);
+     
     };
    
 
@@ -50,8 +49,9 @@ const Question = ({qs}) => {
 
             <p className='text-center'>quiz: {}</p>
             <h3 className='font-semibold text-center'>{question.slice(3, -4)}</h3>
+
             <div className='text-center py-3'>
-                <button onClick={()=> eye(qs)}> <EyeIcon className="h-6 w-6 text-blue-500 text-center" />
+                <button onClick={()=> showCorrectAnswer(qs)}> <EyeIcon className="h-6 w-6 text-blue-500 text-center" />
                 
                 </button>
                 
@@ -62,7 +62,7 @@ const Question = ({qs}) => {
 
             {
                 qs.options.map(op => 
-                    <button onClick={() => handleclicked(op)} className='text-center my-3 border border-indigo-500 py-4 w-96 mx-auto rounded-md shadow-md' 
+                    <button onClick={() => handleChecker(op)} className='md:w-96 sm:w96 text-center my-3 border border-indigo-500 py-4  mx-auto rounded-md shadow-md' 
                 
                 
                 op={op}>{op} 
