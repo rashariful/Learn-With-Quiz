@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { MyQuizContext } from '../Layout/Root';
-import './Recharts.css'
 
 const Recharts = () => {
     const data = useContext(MyQuizContext)
  
     return (
-        <div className='recharts_container flex justify-center py-52'>
-            
-            <LineChart width={700} height={400} data={data.data}>
+        <div className='flex justify-center py-20'>
+            <ResponsiveContainer width="70%" height={400}>
+
+            <LineChart data={data.data}>
                 <Line type="monotone" dataKey='id' stroke="#8884d8" />
                 <CartesianGrid stroke="#ccc" />
                 <XAxis dataKey="name" />
@@ -17,6 +17,7 @@ const Recharts = () => {
                 <Tooltip></Tooltip>
             </LineChart>
 
+            </ResponsiveContainer>
 
 
         </div>
