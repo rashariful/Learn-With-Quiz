@@ -9,6 +9,11 @@ This is a quiz basic web application that has some quizzes, you will get some qu
 - [@Rashariful](https://github.com/rashariful)
 
 
+## Code and Live Link Here
+
+ - [Github Code LInk](https://github.com/programming-hero-web-course2/b6-quiz-crackerz-rashariful)
+ - [Live LInk Netlify](https://634673a74bb4764154b2d653--courageous-nasturtium-848e5d.netlify.app/home)
+
 ## Features
 
 - fetch for data loading
